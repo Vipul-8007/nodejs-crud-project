@@ -58,7 +58,7 @@ app
 
     users[index] = { ...users[index], ...body };
 
-    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users, null, 2), () => {
+    fs.writeFile("./Sample_Data.json", JSON.stringify(users, null, 2), () => {
       res.json({
         status: "success",
         updatedUser: users[index],
@@ -105,3 +105,4 @@ app.post("/api/users", (req, res) => {
 });
 
 app.listen(port, () => console.log(`Server Started at PORT:${port}`));
+
